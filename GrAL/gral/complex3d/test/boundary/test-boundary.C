@@ -1,6 +1,6 @@
 /*! \file
     \author Guntram Berti <berti@ccrl-nece.de>
-    $Id: test-boundary.C,v 1.1 2003/08/01 18:51:34 berti Exp $
+    $Id: test-boundary.C,v 1.2 2004/01/29 18:28:54 berti Exp $
 */
 
 #include "Gral/Grids/Complex3D/boundary.h"
@@ -11,9 +11,10 @@
 #include <iostream>
 
 int main() {
+  using namespace GrAL;
   using namespace std;  
 
-  using cartesian3d::CartesianGrid3D;
+  using GrAL::cartesian3d::CartesianGrid3D;
   typedef grid_types<Complex3D> gt;
 
   {
