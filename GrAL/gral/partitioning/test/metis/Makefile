@@ -15,7 +15,7 @@ include $(DEPS)
 
 
 LDFLAGS += -L$(METIS_LIB)
-LIBS = -lgral-complex2d -lgral-partitioning -lmetis
+LIBS = -lgral-complex2d -lgral-partitioning -lgral-base -lgeometry -lmetis
 
 
 
