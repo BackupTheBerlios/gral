@@ -2,7 +2,7 @@
 
 cvswork=${CVSWORK-${HOME}/CVS-work}
 otherdir=$1
-MODULES=`$cvswork/configuration/scripts/modules.sh`;
+MODULES=`$cvswork/maintenance/scripts/modules.sh`;
 
 cd $cvswork;
 for i in ${MODULES}
