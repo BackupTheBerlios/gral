@@ -11,7 +11,7 @@ which is a model of \sectionlink{\concept{Grid Element}}{GridElement},
 to values of  some type {\tt T}.
 
 \conceptsubsection{Refinement of}
-STL \xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/AdaptableUnaryFunction.html}
+STL \stllink{Adaptable Unary Function}{AdaptableUnaryFunction}
 
 \conceptsubsection{Notation}
 {\tt F} is a type which is a model of  Grid Element Function 
@@ -34,12 +34,12 @@ STL \xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/Adaptable
   type of the underlying element, 
   \par model of \sectionlink{\concept{ Grid Element}}{GridElement} 
   \par synonym for {\tt F::argument\_type}
-  (from \xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/AdaptableUnaryFunction.html})
+  (from \stllink{Adaptable Unary Function}{AdaptableUnaryFunction})
   \\
   value type  &
   {\tt F::value\_type} &
   synomym for {\tt F::result\_type}   
-  \par (from \xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/AdaptableUnaryFunction.html})
+  \par (from \stllink{Adaptable Unary Function}{AdaptableUnaryFunction})
   \\ 
   \hline
   \\
@@ -47,7 +47,7 @@ STL \xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/Adaptable
     
 \conceptsubsection{Valid Expressions}
 No new ones, besides those from 
-\xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/AdaptableUnaryFunction.html}
+\stllink{Adaptable Unary Function}{AdaptableUnaryFunction}
 
 \noindent
 \begin{tabular}{llll} \\
@@ -65,7 +65,7 @@ No new ones, besides those from
 
 \conceptsubsection{Expression semantics}
 The semantics of function evaluation are more restrictive than those for
-\xlink{Adaptable Unary Function}{http://www.sgi.com/Technology/STL/AdaptableUnaryFunction.html}
+\stllink{Adaptable Unary Function}{AdaptableUnaryFunction}
 see the notes below\noteref{note-evaluation}.
 
 \noindent
@@ -101,7 +101,7 @@ see the notes below\noteref{note-evaluation}.
 \conceptsubsection{Models}
 \sectionlink{{\tt cell\_nb\_degree<GRID>}}{cell_nb_degree}
 defined in
-\xlink{{\tt grid-functors.h}}{\NMWRINC/Grids/grid-functors.h}.
+\gralcodelink{grid-functors.h}{base}.
 
 \conceptsubsection{Notes}
 \begin{enumerate}
@@ -111,7 +111,7 @@ defined in
   for subsequent evaluations on the same argument.
 \item \notelabel{note-equal-comp}    
   The type {\tt F::value\_type} is not required to be 
-  STL \xlink{ Equality Comparable }{http://www.sgi.com/Technology/STL/EqualityComparable.html}
+  STL \stllink{Equality Comparable}{EqualityComparable}
   If it is, then {\tt e1 == e2} implies {\tt f(e1) == f(e2)}.
 \end{enumerate}
     
