@@ -6,6 +6,18 @@
 #include "Gral/Grids/CartesianND/cartesiannd.h"
 #include "Gral/Base/grid-function-vector.h"
 
+/*!  \defgroup cartesianndgf Total grid functions for CartesianND
+ 
+      \ingroup cartesianndmodule
+
+      A partial specialization of the primary \c grid_function template is used.
+      \see $GrAL TotalGridFunction
+      \see Test in \ref test-cartesiannd-gf.C
+ */
+
+/*! \brief Specialization for elements of \c cartesiannd::grid<DIM>
+    \ingroup cartesianndgf
+ */
 template<unsigned DIM, unsigned K, class T>
 class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM> ,K>, T >
   : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,K>, T >
@@ -21,86 +33,4 @@ public:
 };
 
 
-/*
-// vertex
-template<unsigned DIM, class T>
-class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM> ,0>, T >
-  : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,0>, T >
-{
-  typedef grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,0>, T > base;
-  typedef cartesiannd::grid<DIM>                                                               grid_type;
-public:  
-  grid_function() {}
-  grid_function(grid_type const& g) : base(g) {}
-  grid_function(grid_type const& g, T const& t) : base(g,t) {}
-  grid_function(ref_ptr<grid_type const> g) : base(g) {}
-  grid_function(ref_ptr<grid_type const> g, T const& t) : base(g,t) {}
-};
-
-// edge
-template<unsigned DIM, class T>
-class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM> ,1>, T >
-  : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,1>, T >
-{
-  typedef grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,1>, T > base;
-  typedef cartesiannd::grid<DIM>                                                               grid_type;
-public:  
-  grid_function() {}
-  grid_function(grid_type const& g) : base(g) {}
-  grid_function(grid_type const& g, T const& t) : base(g,t) {}
-  grid_function(ref_ptr<grid_type const> g) : base(g) {}
-  grid_function(ref_ptr<grid_type const> g, T const& t) : base(g,t) {}
-};
-
-// facet
-template<unsigned DIM, class T>
-class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM-1>, T >
-  : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM-1> , T >
-{
-  typedef grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM-1>, T > base;
-  typedef cartesiannd::grid<DIM-1>                                                                 grid_type;
-public:  
-  grid_function() {}
-  grid_function(grid_type const& g) : base(g) {}
-  grid_function(grid_type const& g, T const& t) : base(g,t) {}
-  grid_function(ref_ptr<grid_type const> g) : base(g) {}
-  grid_function(ref_ptr<grid_type const> g, T const& t) : base(g,t) {}
-};
-
-
-// cell
-template<unsigned DIM, class T>
-class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM>, T >
-  : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM> , T >
-{
-  typedef grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<DIM>,DIM>, T > base;
-  typedef cartesiannd::grid<DIM>                                                                 grid_type;
-public:  
-  grid_function() {}
-  grid_function(grid_type const& g) : base(g) {}
-  grid_function(grid_type const& g, T const& t) : base(g,t) {}
-  grid_function(ref_ptr<grid_type const> g) : base(g) {}
-  grid_function(ref_ptr<grid_type const> g, T const& t) : base(g,t) {}
-};
-
-
-// disambiguate
-// 0D: vertex <-> cell
-
-
-// avoid conflict edge<->facet in 2D
-template<class T>
-class grid_function<cartesiannd::sequence_iterator_t<cartesiannd::grid<2> ,1>, T >
-  : public grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<2>,1>, T >
-{
-  typedef grid_function_vector<cartesiannd::sequence_iterator_t<cartesiannd::grid<2>,1>, T > base;
-  typedef cartesiannd::grid<2>                                                               grid_type;
-public:  
-  grid_function() {}
-  grid_function(grid_type const& g) : base(g) {}
-  grid_function(grid_type const& g, T const& t) : base(g,t) {}
-  grid_function(ref_ptr<grid_type const> g) : base(g) {}
-  grid_function(ref_ptr<grid_type const> g, T const& t) : base(g,t) {}
-};
-*/
 #endif
