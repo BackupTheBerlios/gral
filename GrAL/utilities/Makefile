@@ -7,7 +7,7 @@ TARGET=all
 all:
 	(cd src; $(MAKE) all)
 
-new: realclean
+new:
 	(cd src; $(MAKE) new)
 
 
@@ -33,7 +33,7 @@ clean: stdclean
 
 
 realclean: clean
-	rm -rf doxygen/*;
+	rm -rf doxygen
 	rm -rf lib/
 
 
