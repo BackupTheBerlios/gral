@@ -31,13 +31,11 @@ realclean: clean
 test:
 	(cd test; $(MAKE) $(TARGET) CONFIG=$(CONFIG))
 
-doc: doxy tex
-
 doxy:
 	mkdir -p doxygen
 	(TEXINPUTS=$(TEXINPUTS):$(PWD); export TEXINPUTS; doxygen doxy.cfg;)
 
-tex:
+docs:
 	(cd doc; $(MAKE) $(TARGET))
 	rm -f $(ROOT)/doxygen/html/external-control.html
 	ln -s $(ROOT)/doc/html_dir/external-control.html $(ROOT)/doxygen/html
@@ -49,4 +47,4 @@ tar:
          tar -cf external-control.tar external-control; \
          rm -rf external-control/;)
 
-.PHONY: demo test doc
+.PHONY: demo test
