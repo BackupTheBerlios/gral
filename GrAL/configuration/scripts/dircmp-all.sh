@@ -1,8 +1,8 @@
 #! /bin/bash
 
-cvswork=${CVSWORK-${HOME}/CVS-work}
+cvswork=${CVSWORK-${HOME}/CVS-work/GrAL}
 otherdir=$1
-MODULES=`$cvswork/maintenance/scripts/modules.sh`;
+MODULES=`$cvswork/configuration/scripts/modules.sh`;
 
 cd $cvswork;
 for i in ${MODULES}
