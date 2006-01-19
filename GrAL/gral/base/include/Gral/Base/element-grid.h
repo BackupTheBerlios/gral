@@ -21,7 +21,6 @@ namespace GrAL {
 
    \todo Need facet types
    \todo Need boundary
-   \todo Need begin/end/size overloads
 */
 template<class E> class element_grid;
 
