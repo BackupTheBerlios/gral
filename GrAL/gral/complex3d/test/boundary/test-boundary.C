@@ -1,7 +1,21 @@
 /*! \file
     \author Guntram Berti <berti@ccrl-nece.de>
-    $Id: test-boundary.C,v 1.2 2004/01/29 18:28:54 berti Exp $
+    $Id: test-boundary.C,v 1.3 2009/03/25 20:23:29 guntram Exp $
 */
+
+
+/* ------------------------------------------------------------
+
+    Copyright (C) 2001 - 2009 Guntram Berti,
+    Contact: guntram AT users DOT berlios DOT de
+
+    This file is part of the Grid Algorithms Library (GrAL),
+    available at http://gral.berlios.de
+
+    GrAL is distributed under the MIT license,
+    see the file LICENSE or http://gral.berlios.de/license
+
+--------------------------------------------------------------- */
 
 #include "Gral/Grids/Complex3D/boundary.h"
 
