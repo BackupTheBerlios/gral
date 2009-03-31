@@ -1,8 +1,7 @@
 
 /* ------------------------------------------------------------
 
-    Copyright (C) 2007 - 2009 Guntram Berti,
-    Contact: guntram AT users DOT berlios DOT de
+    Copyright (C) 2007 - 2009 Guntram Berti
 
     This file is part of the Grid Algorithms Library (GrAL),
     available at http://gral.berlios.de
@@ -30,7 +29,7 @@
 #include <iostream>
 #include <fstream>
 
-static const char* version = "$Id: vtk2any.C,v 1.6 2009/03/25 20:23:30 guntram Exp $";
+static const char* version = "$Id: vtk2any.C,v 1.7 2009/03/31 17:49:57 guntram Exp $";
 
 int main(int argc, char* argv[]) {
   using namespace GrAL;

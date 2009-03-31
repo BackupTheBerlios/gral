@@ -1,13 +1,12 @@
 /*! \file
     \author Guntram Berti <berti@ccrl-nece.de>
-    $Id: test-boundary.C,v 1.3 2009/03/25 20:23:29 guntram Exp $
+    $Id: test-boundary.C,v 1.4 2009/03/31 17:49:55 guntram Exp $
 */
 
 
 /* ------------------------------------------------------------
 
-    Copyright (C) 2001 - 2009 Guntram Berti,
-    Contact: guntram AT users DOT berlios DOT de
+    Copyright (C) 2001 - 2009 Guntram Berti
 
     This file is part of the Grid Algorithms Library (GrAL),
     available at http://gral.berlios.de
